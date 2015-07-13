@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ubermelon Order Form</title>
+    </head>
+    <body>
+        <h1>Order!</h1>
+        <table>            
+            <thead>
+            <th>Prices</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Melon Name</td>
+                    <td>Price per lb.</td>
+                </tr>
+                <tr>
+                    <td>Watermelon</td>
+                    <td>$1.59</td> 
+                </tr>
+                <tr>
+                    <td>Honeydew</td>
+                    <td>$0.99</td>
+                </tr>
+                <tr>
+                    <td>Canteloupe</td>
+                    <td>$1.29</td>
+                </tr>
+                <tr>
+                    <td>Crenshaw</td>
+                    <td>$2.19</td>
+                </tr>
+                <tr>
+                    <td>Canary</td>
+                    <td>$11.99</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Place your orders here! You know you want to.</p>
+        <form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
+            <label for="field-first-name">First Name</label> 
+                <input type="text" name="firstname" id="field-first-name"><br>
+            <label for="field-last-name">Last Name</label> 
+                <input type="text" name="lastname" id="field-last-name"><br>
+            <label for="field-mom-first-name">Your Mom's First Name</label> 
+                <input type="text" name="momfirstname" id="field-mom-first-name"><br>
+            <label for="field-mom-last-name">Your Mom's Last Name</label> 
+                <input type="text" name="momlikesmelons" id="field-mom-likes-melons"><br>
+            <label for="field-first-name">What is your mom's favorite kind of melon? </label> 
+                <input type="text" name="momlikesmelons" id="field-mom-likes-melons"><br>
+            <label for="melontype">Melon Type </label><select name="melontype">
+                <option value="Watermelon">Watermelon</option>
+                <option value="Honeydew">Honeydew</option>
+                <option value="Canteloupe">Canteloupe</option>
+                <option value="Crenshaw">Crenshaw</option>
+                <option value="Canary">Canary</option>
+            </select><br>
+            <label for="quantity">Quantity*:</label> 
+                <input type="text" name="quantity" id="quantity"><br>
+            <label for="time">Delivery Time</label>
+                <input type="radio" name="time" value="am">12:00am-12:00pm
+                <input type="radio" name="time" value="pm">12:00pm-12:00am
+                <input type="radio" name="time" value="wat">Time is an illusion
+                <br>
+            <label for="returning-customer">Returning Customer?</label>
+                <input type="radio" name="returning" value="yes">Yes
+                <input type="radio" name="returning" value="no">No<br>
+            <label for="stats">For Statistical Purposes:</label>
+                <input type="checkbox" name="stats" value="Dog">Dog
+                <input type="checkbox" name="stats" value="Cat">Cat
+                <input type="checkbox" name="stats" value="Hedgehog">Hedgehog
+                <input type="checkbox" name="stats" value="Balloonicorn">Balloonicorn
+                <input type="checkbox" name="stats" value="Yak">Yak<br>
+            <label for="tentacles">If you could have tentacles, how many would you have? </label><select name="tentacles">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="All of them, please">All of them, please</option>
+                <option value="You're gross">Stop asking weird form questions, melon people</option>
+            </select><br>
+            <label for="box_colors">Box Colors</label>
+                <input type="radio" name="box" value="pink">Pink
+                <input type="radio" name="box" value="orange">Organge
+                <input type="radio" name="box" value="black">Black
+                <br>
+            <input type="submit" value="I WANT MELONS NOW"><br>
+            <label for="ratings">Give us a Review!</label><select name="ratings">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        <footer>*Quantities are given by the flat.</footer>
+
+        </form>
+    </body>
+</html>
